@@ -3,9 +3,9 @@ title: EnergyPlus-d5742f782c8689d804f14dbd2d8ab308c71c2743-x86_64-Linux-Ubuntu-2
 permalink: EnergyPlus-d5742f782c8689d804f14dbd2d8ab308c71c2743-x86_64-Linux-Ubuntu-22.04-gcc-11.3-UnitTestsCoverage-Debug.html
 tags: data
 layout: ci_results
-date: '2023-06-01 19:28:59'
+date: '2023-06-01 19:30:53'
 unhandled_failure: false
-build_error_count: 0
+build_error_count: 2
 build_warning_count: 0
 package_error_count: 0
 package_warning_count: 0
@@ -29,9 +29,9 @@ pull_request_issue_id: ''
 pull_request_base_repository: ''
 pull_request_base_ref: ''
 device_id: x86_64-Linux-Ubuntu-22.04-gcc-11.3-UnitTestsCoverage-Debug
-pending: true
-build_time: 
-test_time: 
+pending: false
+build_time: 106.429338547
+test_time: 1.023677055
 package_time: 
 install_time: 
 results_repository: Myoldmopar/EnergyPlusBuildResults
@@ -46,7 +46,9 @@ coverage_lines: 0
 coverage_total_lines: 0
 coverage_functions: 0
 coverage_total_functions: 0
-coverage_url: 
+coverage_url: 'http://energyplus.s3-website-us-east-1.amazonaws.com/coverage/2023-06-01-EnergyPlus-d5742f782c-x86_64-gcc-11.3UTCD
+
+  '
 asset_url: 
 performance_total_time: 
 performance_test_count: 0
@@ -60,7 +62,20 @@ valgrind_counters_total_indirect_jump_misses:
 ---
 {
   "build_results": [
-
+    {
+      "filename": "CMakeLists.txt",
+      "linenumber": 1,
+      "colnumber": 0,
+      "messagetype": "error",
+      "message": "CMake Error: File /home/nrel/ci/clone_branch/idd/Energy+.schema.epJSON.in does not exist.; CMake Error at CMakeLists.txt:312 (configure_file):"
+    },
+    {
+      "filename": "CMakeLists.txt",
+      "linenumber": "312",
+      "colnumber": 0,
+      "messagetype": "error",
+      "message": ""
+    }
   ],
   "test_results": [
 
@@ -74,9 +89,9 @@ valgrind_counters_total_indirect_jump_misses:
     "permalink": "EnergyPlus-d5742f782c8689d804f14dbd2d8ab308c71c2743-x86_64-Linux-Ubuntu-22.04-gcc-11.3-UnitTestsCoverage-Debug.html",
     "tags": "data",
     "layout": "ci_results",
-    "date": "2023-06-01 19:28:59",
+    "date": "2023-06-01 19:30:53",
     "unhandled_failure": false,
-    "build_error_count": 0,
+    "build_error_count": 2,
     "build_warning_count": 0,
     "package_error_count": 0,
     "package_warning_count": 0,
@@ -100,9 +115,9 @@ valgrind_counters_total_indirect_jump_misses:
     "pull_request_base_repository": "",
     "pull_request_base_ref": "",
     "device_id": "x86_64-Linux-Ubuntu-22.04-gcc-11.3-UnitTestsCoverage-Debug",
-    "pending": true,
-    "build_time": null,
-    "test_time": null,
+    "pending": false,
+    "build_time": 106.429338547,
+    "test_time": 1.023677055,
     "package_time": null,
     "install_time": null,
     "results_repository": "Myoldmopar/EnergyPlusBuildResults",
@@ -117,7 +132,7 @@ valgrind_counters_total_indirect_jump_misses:
     "coverage_total_lines": 0,
     "coverage_functions": 0,
     "coverage_total_functions": 0,
-    "coverage_url": null,
+    "coverage_url": "http://energyplus.s3-website-us-east-1.amazonaws.com/coverage/2023-06-01-EnergyPlus-d5742f782c-x86_64-gcc-11.3UTCD\n",
     "asset_url": null,
     "performance_total_time": null,
     "performance_test_count": 0,
