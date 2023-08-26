@@ -3,8 +3,8 @@ title: EnergyPlus-fa1607effb2cd68f5467bc44168e1f198c7f2cf0-PR10144-x86_64-Linux-
 permalink: EnergyPlus-fa1607effb2cd68f5467bc44168e1f198c7f2cf0-PR10144-x86_64-Linux-Ubuntu-22.04-gcc-11.4.html
 tags: data
 layout: ci_results
-date: '2023-08-26 17:47:29'
-unhandled_failure: false
+date: '2023-08-26 17:47:33'
+unhandled_failure: true
 build_error_count: 0
 build_warning_count: 0
 test_count: 0
@@ -22,7 +22,7 @@ pull_request_issue_id: '10144'
 pull_request_base_repository: ''
 pull_request_base_ref: ''
 device_id: x86_64-Linux-Ubuntu-22.04-gcc-11.4
-pending: true
+pending: false
 build_time: 
 test_time: 
 install_time: 
@@ -39,14 +39,15 @@ coverage_total_lines: 0
 coverage_functions: 0
 coverage_total_functions: 0
 coverage_url: 
-performance_total_time: 
+performance_total_time: 0
 performance_test_count: 0
-valgrind_counters_total_time: 
+valgrind_counters_total_time: 0
 valgrind_counters_test_count: 0
-valgrind_counters_total_conditional_branches: 
-valgrind_counters_total_conditional_branch_misses: 
-valgrind_counters_total_indirect_jumps: 
-valgrind_counters_total_indirect_jump_misses: 
+valgrind_counters_total_conditional_branches: 0
+valgrind_counters_total_conditional_branch_misses: 0
+valgrind_counters_total_indirect_jumps: 0
+valgrind_counters_total_indirect_jump_misses: 0
+perf_test_count: 0
 
 ---
 {
@@ -56,14 +57,14 @@ valgrind_counters_total_indirect_jump_misses:
   "test_results": [
 
   ],
-  "failure": null,
+  "failure": "undefined method `pull_id=' for #<PotentialBuild:0x000055c2d53f3bb0 @client=#<Octokit::Client:0x000055c2d2a4c780 @access_token=\"************************************fe0d\", @api_endpoint=\"https://api.github.com\", @auto_paginate=nil, @bearer_token=nil, @client_id=nil, @client_secret=nil, @connection_options={:headers=>{:accept=>\"application/vnd.github.v3+json\", :user_agent=>\"Octokit Ruby Gem 6.1.1\"}, :builder=>#<Faraday::RackBuilder:0x000055c2d2a57040 @adapter=Faraday::Adapter::NetHttp, @handlers=[Octokit::Middleware::FollowRedirects, Octokit::Response::RaiseError, Octokit::Response::FeedParser, Faraday::Request::Authorization], @app=#<Octokit::Middleware::FollowRedirects:0x000055c2d21ff730 @app=#<Octokit::Response::RaiseError:0x000055c2d21ff910 @app=#<Octokit::Response::FeedParser:0x000055c2d21ffc80 @app=#<Faraday::Request::Authorization:0x000055c2d22056a8 @type=\"token\", @params=[\"************************************fe0d\"], @app=#<Faraday::Adapter::NetHttp:0x000055c2d2204960 @ssl_cert_store=#<OpenSSL::X509::Store:0x000055c2d286db30 @verify_callback=nil, @error=nil, @error_string=nil, @chain=nil, @time=nil>, @app=#<Proc:0x000055c2d2204780 /var/lib/gems/3.0.0/gems/faraday-2.7.4/lib/faraday/adapter.rb:29 (lambda)>, @connection_options={}, @config_block=nil>, @options={}>, @options={}>, @options={}>, @options={}, @convert_to_get=#<Set: {303}>>>, :ssl=>{:verify_mode=>1}}, @default_media_type=\"application/vnd.github.v3+json\", @login=nil, @management_console_endpoint=nil, @management_console_password=nil, @middleware=#<Faraday::RackBuilder:0x000055c2d1a33330 @adapter=Faraday::Adapter::NetHttp, @handlers=[Octokit::Middleware::FollowRedirects, Octokit::Response::RaiseError, Octokit::Response::FeedParser]>, @netrc=false, @netrc_file=\"/home/nrel/.netrc\", @per_page=nil, @password=nil, @proxy=nil, @ssl_verify_mode=1, @user_agent=\"Octokit Ruby Gem 6.1.1\", @web_endpoint=\"https://github.com\", @agent=<Sawyer::Agent https://api.github.com/>, @last_response=#<Sawyer::Response: 201 @rels={} @data={:url=>\n  \"https://api.github.com/repos/NREL/EnergyPlus/statuses/fa1607effb2cd68f5467bc44168e1f198c7f2cf0\",\n :avatar_url=>\"https://avatars.githubusercontent.com/u/15201589?v=4\",\n :id=>24781167340,\n :node_id=>\"SC_kwDOAN8WGc8AAAAFxRKa7A\",\n :state=>\"pending\",\n :description=>\"Build Pending\",\n :target_url=>\n  \"https://myoldmopar.github.io/EnergyPlusBuildResults/EnergyPlus-fa1607effb2cd68f5467bc44168e1f198c7f2cf0-PR10144-x86_64-Linux-Ubuntu-22.04-gcc-11.4.html\",\n :context=>\"x86_64-Linux-Ubuntu-22.04-gcc-11.4\",\n :created_at=>2023-08-26 17:47:58 UTC,\n :updated_at=>2023-08-26 17:47:58 UTC,\n :creator=>\n  {:login=>\"nrel-bot-2\",\n   :id=>15201589,\n   :node_id=>\"MDQ6VXNlcjE1MjAxNTg5\",\n   :avatar_url=>\"https://avatars.githubusercontent.com/u/15201589?v=4\",\n   :gravatar_id=>\"\",\n   :url=>\"https://api.github.com/users/nrel-bot-2\",\n   :html_url=>\"https://github.com/nrel-bot-2\",\n   :followers_url=>\"https://api.github.com/users/nrel-bot-2/followers\",\n   :following_url=>\n    \"https://api.github.com/users/nrel-bot-2/following{/other_user}\",\n   :gists_url=>\"https://api.github.com/users/nrel-bot-2/gists{/gist_id}\",\n   :starred_url=>\n    \"https://api.github.com/users/nrel-bot-2/starred{/owner}{/repo}\",\n   :subscriptions_url=>\"https://api.github.com/users/nrel-bot-2/subscriptions\",\n   :organizations_url=>\"https://api.github.com/users/nrel-bot-2/orgs\",\n   :repos_url=>\"https://api.github.com/users/nrel-bot-2/repos\",\n   :events_url=>\"https://api.github.com/users/nrel-bot-2/events{/privacy}\",\n   :received_events_url=>\n    \"https://api.github.com/users/nrel-bot-2/received_events\",\n   :type=>\"User\",\n   :site_admin=>false}}\n>>, @config=#<OpenStruct os=\"Linux\", os_release=\"Ubuntu-22.04\", engine=\"cmake\", post_results_comment=true, post_results_status=true, cmake_bin=\"\\\"/usr/bin/cmake\\\"\", ctest_bin=\"\\\"/usr/bin/ctest\\\"\", results_repository=\"Myoldmopar/EnergyPlusBuildResults\", results_path=\"_posts\", results_base_url=\"https://myoldmopar.github.io/EnergyPlusBuildResults\", regression_repository=\"NREL/EnergyPlusRegressionTool\", regression_branch=\"main\", regression_baseline_default=\"develop\", regression_baseline_develop=\"\", regression_baseline_master=\"\", notification_recipients=[\"myoldmopar\"], aging_pull_requests_notification=true, aging_pull_requests_numdays=28, compilers=[{:name=>\"gcc\", :version=>\"11.4\", :cmake_extra_flags=>\"-DLINK_WITH_PYTHON:BOOL=ON -DBUILD_FORTRAN:BOOL=ON -DBUILD_TESTING:BOOL=ON -DENABLE_REGRESSION_TESTING:BOOL=ON -DREGRESSION_BASELINE_PATH:PATH=$REGRESSION_BASELINE -DREGRESSION_SCRIPT_PATH:PATH=$REGRESSION_DIR -DREGRESSION_BASELINE_SHA:STRING=$REGRESSION_BASELINE_SHA -DCOMMIT_SHA:STRING=$COMMIT_SHA -DENABLE_GTEST_DEBUG_MODE:BOOL=OFF -DBUILD_PERFORMANCE_TESTS:BOOL=ON -DVALGRIND_ANALYZE_PERFORMANCE_TESTS:BOOL=ON -DENABLE_PCH:BOOL=OFF\", :collect_performance_results=>true, :s3_upload_bucket=>\"energyplus\", :architecture=>\"x86_64\", :cc_bin=>\"/usr/bin/gcc\", :cxx_bin=>\"/usr/bin/g++\", :analyze_only=>false, :release_only=>false, :skip_packaging=>nil, :description=>\"gcc-11.4\", :build_type=>\"Release\", :build_generator=>\"Unix Makefiles\", :target_arch=>\"x86_64\", :skip_regression=>false, :ctest_filter=>\"\", :coverage_base_dir=>\"\", :coverage_enabled=>false, :coverage_pass_limit=>90, :coverage_warn_limit=>75, :num_parallel_builds=>15}, {:name=>\"gcc\", :version=>\"11.4\", :build_type=>\"Debug\", :cmake_extra_flags=>\"-DLINK_WITH_PYTHON:BOOL=ON -DBUILD_FORTRAN:BOOL=ON -DBUILD_TESTING:BOOL=ON -DENABLE_REGRESSION_TESTING:BOOL=OFF -DCOMMIT_SHA:STRING=$COMMIT_SHA -DENABLE_COVERAGE:BOOL=ON -DENABLE_GTEST_DEBUG_MODE:BOOL=OFF -DENABLE_PCH:BOOL=OFF\", :coverage_enabled=>true, :coverage_base_dir=>\"src/EnergyPlus\", :coverage_pass_limit=>41.0, :coverage_warn_limit=>40.0, :coverage_s3_bucket=>\"energyplus\", :build_tag=>\"UnitTestsCoverage\", :ctest_filter=>\"-E \\\"integration.*\\\"\", :skip_regression=>true, :skip_packaging=>true, :architecture=>\"x86_64\", :cc_bin=>\"/usr/bin/gcc\", :cxx_bin=>\"/usr/bin/g++\", :analyze_only=>false, :release_only=>false, :description=>\"gcc-11.4\", :build_generator=>\"Unix Makefiles\", :target_arch=>\"x86_64\", :collect_performance_results=>false, :num_parallel_builds=>15}, {:name=>\"gcc\", :version=>\"11.4\", :build_type=>\"Debug\", :cmake_extra_flags=>\"-DLINK_WITH_PYTHON:BOOL=ON -DBUILD_FORTRAN:BOOL=ON -DBUILD_TESTING:BOOL=ON -DENABLE_REGRESSION_TESTING:BOOL=OFF -DCOMMIT_SHA:STRING=$COMMIT_SHA -DENABLE_COVERAGE:BOOL=ON -DENABLE_GTEST_DEBUG_MODE:BOOL=OFF -DENABLE_PCH:BOOL=OFF\", :coverage_enabled=>true, :coverage_base_dir=>\"src/EnergyPlus\", :coverage_pass_limit=>66.0, :coverage_warn_limit=>67.0, :coverage_s3_bucket=>\"energyplus\", :build_tag=>\"IntegrationCoverage\", :ctest_filter=>\"-R \\\"integration.*\\\"\", :skip_regression=>true, :skip_packaging=>true, :architecture=>\"x86_64\", :cc_bin=>\"/usr/bin/gcc\", :cxx_bin=>\"/usr/bin/g++\", :analyze_only=>false, :release_only=>false, :description=>\"gcc-11.4\", :build_generator=>\"Unix Makefiles\", :target_arch=>\"x86_64\", :collect_performance_results=>false, :num_parallel_builds=>15}], test_pass_limit=99.9999, test_warn_limit=90.0, repository_name=\"EnergyPlus\", repository=\"NREL/EnergyPlus\", token=\"0d3220859df4ea4f72d5f8c226285037d2b7fe0d\">, @repository=\"NREL/EnergyPlus\", @commit_sha=\"fa1607effb2cd68f5467bc44168e1f198c7f2cf0\", @branch_name=\"918-Invalid-warnings-and-fatal\", @author=\"rraustad\", @buildid=\"fa1607effb2cd68f5467bc44168e1f198c7f2cf0-PR10144\", @refspec=\"918-Invalid-warnings-and-fatal\", @pull_id=10144, @pull_request_base_repository=nil, @pull_request_base_ref=nil, @short_buildid=\"fa1607effb-PR10144\", @test_results=nil, @test_messages=[], @build_results=#<SortedSet: {}>, @dateprefix=\"2023-08-26\", @failure=nil, @test_run=false, @build_time=nil, @test_time=nil, @install_time=nil, @package_time=nil, @coverage_lines=0, @coverage_total_lines=0, @coverage_functions=0, @coverage_total_functions=0, @coverage_url=nil, @asset_url=nil, @acting_as_baseline=false, @valgrind_counters_results=nil, @perf_counters_results=nil, @file_sizes=nil, @results_document_sha=\"628efc532a3bca11ad8e846e66aaf5cf051514f6\">\nDid you mean?  pull_id\n[\"decent_ci/ci.rb:253:in `block (3 levels) in <main>'\", \"decent_ci/ci.rb:220:in `each'\", \"decent_ci/ci.rb:220:in `block (2 levels) in <main>'\", \"decent_ci/ci.rb:214:in `each'\", \"decent_ci/ci.rb:214:in `block in <main>'\", \"/var/lib/gems/3.0.0/gems/activesupport-7.0.4.3/lib/active_support/core_ext/range/each.rb:9:in `each'\", \"/var/lib/gems/3.0.0/gems/activesupport-7.0.4.3/lib/active_support/core_ext/range/each.rb:9:in `each'\", \"decent_ci/ci.rb:177:in `<main>'\"]",
   "configuration": {
     "title": "EnergyPlus-fa1607effb2cd68f5467bc44168e1f198c7f2cf0-PR10144-x86_64-Linux-Ubuntu-22.04-gcc-11.4",
     "permalink": "EnergyPlus-fa1607effb2cd68f5467bc44168e1f198c7f2cf0-PR10144-x86_64-Linux-Ubuntu-22.04-gcc-11.4.html",
     "tags": "data",
     "layout": "ci_results",
-    "date": "2023-08-26 17:47:29",
-    "unhandled_failure": false,
+    "date": "2023-08-26 17:47:33",
+    "unhandled_failure": true,
     "build_error_count": 0,
     "build_warning_count": 0,
     "test_count": 0,
@@ -81,7 +82,7 @@ valgrind_counters_total_indirect_jump_misses:
     "pull_request_base_repository": "",
     "pull_request_base_ref": "",
     "device_id": "x86_64-Linux-Ubuntu-22.04-gcc-11.4",
-    "pending": true,
+    "pending": false,
     "build_time": null,
     "test_time": null,
     "install_time": null,
@@ -98,16 +99,30 @@ valgrind_counters_total_indirect_jump_misses:
     "coverage_functions": 0,
     "coverage_total_functions": 0,
     "coverage_url": null,
-    "performance_total_time": null,
+    "performance_total_time": 0,
     "performance_test_count": 0,
-    "valgrind_counters_total_time": null,
+    "valgrind_counters_total_time": 0,
     "valgrind_counters_test_count": 0,
-    "valgrind_counters_total_conditional_branches": null,
-    "valgrind_counters_total_conditional_branch_misses": null,
-    "valgrind_counters_total_indirect_jumps": null,
-    "valgrind_counters_total_indirect_jump_misses": null
+    "valgrind_counters_total_conditional_branches": 0,
+    "valgrind_counters_total_conditional_branch_misses": 0,
+    "valgrind_counters_total_indirect_jumps": 0,
+    "valgrind_counters_total_indirect_jump_misses": 0,
+    "perf_test_count": 0
   },
-  "performance_results": null,
-  "perf_performance_results": null,
-  "file_sizes": null
+  "performance_results": {
+    "object_files": [
+
+    ],
+    "test_files": [
+
+    ]
+  },
+  "perf_performance_results": {
+    "test_files": [
+
+    ]
+  },
+  "file_sizes": [
+
+  ]
 }
