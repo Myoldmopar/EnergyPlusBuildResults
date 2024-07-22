@@ -3,9 +3,9 @@ title: EnergyPlus-5e7e921fb4f4c5218d403f639a6b12a8f47ab02f-x86_64-Linux-Ubuntu-2
 permalink: EnergyPlus-5e7e921fb4f4c5218d403f639a6b12a8f47ab02f-x86_64-Linux-Ubuntu-22.04-gcc-11.4-IntegrationCoverage-Debug.html
 tags: data
 layout: ci_results
-date: '2024-07-22 19:58:13'
+date: '2024-07-22 19:59:54'
 unhandled_failure: false
-build_error_count: 0
+build_error_count: 3
 build_warning_count: 0
 package_error_count: 0
 package_warning_count: 0
@@ -29,9 +29,9 @@ pull_request_issue_id: ''
 pull_request_base_repository: ''
 pull_request_base_ref: ''
 device_id: x86_64-Linux-Ubuntu-22.04-gcc-11.4-IntegrationCoverage-Debug
-pending: true
-build_time: 
-test_time: 
+pending: false
+build_time: 92.957721767
+test_time: 1.026074781
 package_time: 
 install_time: 
 results_repository: Myoldmopar/EnergyPlusBuildResults
@@ -46,7 +46,9 @@ coverage_lines: 0
 coverage_total_lines: 0
 coverage_functions: 0
 coverage_total_functions: 0
-coverage_url: 
+coverage_url: 'http://energyplus.s3-website-us-east-1.amazonaws.com/coverage/2024-07-22-EnergyPlus-5e7e921fb4-x86_64-gcc-11.4ICD
+
+  '
 asset_url: 
 performance_total_time: 
 performance_test_count: 0
@@ -60,7 +62,27 @@ valgrind_counters_total_indirect_jump_misses:
 ---
 {
   "build_results": [
-
+    {
+      "filename": "cmake/ProjectMacros.cmake",
+      "linenumber": "8",
+      "colnumber": 0,
+      "messagetype": "error",
+      "message": "file failed to open for reading (No such file or directory):; ; /home/nrel/ci/clone_branch/tst/EnergyPlus/unit/extendedHI.unit.cc"
+    },
+    {
+      "filename": "cmake/ProjectMacros.cmake",
+      "linenumber": "12",
+      "colnumber": 0,
+      "messagetype": "error",
+      "message": ""
+    },
+    {
+      "filename": "cmake/ProjectMacros.cmake",
+      "linenumber": "12",
+      "colnumber": 0,
+      "messagetype": "error",
+      "message": "tst/EnergyPlus/unit/CMakeLists.txt:295 (create_test_targets); "
+    }
   ],
   "test_results": [
 
@@ -74,9 +96,9 @@ valgrind_counters_total_indirect_jump_misses:
     "permalink": "EnergyPlus-5e7e921fb4f4c5218d403f639a6b12a8f47ab02f-x86_64-Linux-Ubuntu-22.04-gcc-11.4-IntegrationCoverage-Debug.html",
     "tags": "data",
     "layout": "ci_results",
-    "date": "2024-07-22 19:58:13",
+    "date": "2024-07-22 19:59:54",
     "unhandled_failure": false,
-    "build_error_count": 0,
+    "build_error_count": 3,
     "build_warning_count": 0,
     "package_error_count": 0,
     "package_warning_count": 0,
@@ -100,9 +122,9 @@ valgrind_counters_total_indirect_jump_misses:
     "pull_request_base_repository": "",
     "pull_request_base_ref": "",
     "device_id": "x86_64-Linux-Ubuntu-22.04-gcc-11.4-IntegrationCoverage-Debug",
-    "pending": true,
-    "build_time": null,
-    "test_time": null,
+    "pending": false,
+    "build_time": 92.957721767,
+    "test_time": 1.026074781,
     "package_time": null,
     "install_time": null,
     "results_repository": "Myoldmopar/EnergyPlusBuildResults",
@@ -117,7 +139,7 @@ valgrind_counters_total_indirect_jump_misses:
     "coverage_total_lines": 0,
     "coverage_functions": 0,
     "coverage_total_functions": 0,
-    "coverage_url": null,
+    "coverage_url": "http://energyplus.s3-website-us-east-1.amazonaws.com/coverage/2024-07-22-EnergyPlus-5e7e921fb4-x86_64-gcc-11.4ICD\n",
     "asset_url": null,
     "performance_total_time": null,
     "performance_test_count": 0,
