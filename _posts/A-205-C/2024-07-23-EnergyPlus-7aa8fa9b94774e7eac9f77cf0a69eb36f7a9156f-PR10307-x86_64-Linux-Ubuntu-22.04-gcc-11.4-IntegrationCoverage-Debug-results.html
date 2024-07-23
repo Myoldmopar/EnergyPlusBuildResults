@@ -3,9 +3,9 @@ title: EnergyPlus-7aa8fa9b94774e7eac9f77cf0a69eb36f7a9156f-PR10307-x86_64-Linux-
 permalink: EnergyPlus-7aa8fa9b94774e7eac9f77cf0a69eb36f7a9156f-PR10307-x86_64-Linux-Ubuntu-22.04-gcc-11.4-IntegrationCoverage-Debug.html
 tags: data
 layout: ci_results
-date: '2024-07-23 14:35:47'
+date: '2024-07-23 14:37:37'
 unhandled_failure: false
-build_error_count: 0
+build_error_count: 1
 build_warning_count: 0
 package_error_count: 0
 package_warning_count: 0
@@ -29,9 +29,9 @@ pull_request_issue_id: '10307'
 pull_request_base_repository: NREL/EnergyPlus
 pull_request_base_ref: develop
 device_id: x86_64-Linux-Ubuntu-22.04-gcc-11.4-IntegrationCoverage-Debug
-pending: true
-build_time: 
-test_time: 
+pending: false
+build_time: 102.383856522
+test_time: 1.02484816
 package_time: 
 install_time: 
 results_repository: Myoldmopar/EnergyPlusBuildResults
@@ -46,7 +46,9 @@ coverage_lines: 0
 coverage_total_lines: 0
 coverage_functions: 0
 coverage_total_functions: 0
-coverage_url: 
+coverage_url: 'http://energyplus.s3-website-us-east-1.amazonaws.com/coverage/2024-07-23-EnergyPlus-7aa8fa9b94-PR10307-x86_64-gcc-11.4ICD
+
+  '
 asset_url: 
 performance_total_time: 
 performance_test_count: 0
@@ -60,7 +62,13 @@ valgrind_counters_total_indirect_jump_misses:
 ---
 {
   "build_results": [
-
+    {
+      "filename": "../../../../usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake",
+      "linenumber": "230",
+      "colnumber": 0,
+      "messagetype": "error",
+      "message": "suitable version \"3.10.12\", minimum required is \"3.6\"); ; Reason given by package:"
+    }
   ],
   "test_results": [
 
@@ -74,9 +82,9 @@ valgrind_counters_total_indirect_jump_misses:
     "permalink": "EnergyPlus-7aa8fa9b94774e7eac9f77cf0a69eb36f7a9156f-PR10307-x86_64-Linux-Ubuntu-22.04-gcc-11.4-IntegrationCoverage-Debug.html",
     "tags": "data",
     "layout": "ci_results",
-    "date": "2024-07-23 14:35:47",
+    "date": "2024-07-23 14:37:37",
     "unhandled_failure": false,
-    "build_error_count": 0,
+    "build_error_count": 1,
     "build_warning_count": 0,
     "package_error_count": 0,
     "package_warning_count": 0,
@@ -100,9 +108,9 @@ valgrind_counters_total_indirect_jump_misses:
     "pull_request_base_repository": "NREL/EnergyPlus",
     "pull_request_base_ref": "develop",
     "device_id": "x86_64-Linux-Ubuntu-22.04-gcc-11.4-IntegrationCoverage-Debug",
-    "pending": true,
-    "build_time": null,
-    "test_time": null,
+    "pending": false,
+    "build_time": 102.383856522,
+    "test_time": 1.02484816,
     "package_time": null,
     "install_time": null,
     "results_repository": "Myoldmopar/EnergyPlusBuildResults",
@@ -117,7 +125,7 @@ valgrind_counters_total_indirect_jump_misses:
     "coverage_total_lines": 0,
     "coverage_functions": 0,
     "coverage_total_functions": 0,
-    "coverage_url": null,
+    "coverage_url": "http://energyplus.s3-website-us-east-1.amazonaws.com/coverage/2024-07-23-EnergyPlus-7aa8fa9b94-PR10307-x86_64-gcc-11.4ICD\n",
     "asset_url": null,
     "performance_total_time": null,
     "performance_test_count": 0,
