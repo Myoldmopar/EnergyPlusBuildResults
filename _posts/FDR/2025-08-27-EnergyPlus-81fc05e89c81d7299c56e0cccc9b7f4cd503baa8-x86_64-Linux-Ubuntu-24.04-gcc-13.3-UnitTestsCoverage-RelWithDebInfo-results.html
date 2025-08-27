@@ -3,14 +3,14 @@ title: EnergyPlus-81fc05e89c81d7299c56e0cccc9b7f4cd503baa8-x86_64-Linux-Ubuntu-2
 permalink: EnergyPlus-81fc05e89c81d7299c56e0cccc9b7f4cd503baa8-x86_64-Linux-Ubuntu-24.04-gcc-13.3-UnitTestsCoverage-RelWithDebInfo.html
 tags: data
 layout: ci_results
-date: '2025-08-27 16:11:05'
+date: '2025-08-27 16:14:59'
 unhandled_failure: false
 build_error_count: 0
 build_warning_count: 0
 package_error_count: 0
 package_warning_count: 0
-test_count: 0
-test_passed_count: 0
+test_count: 31
+test_passed_count: 9
 repository: NREL/EnergyPlus
 compiler: gcc
 compiler_version: '13.3'
@@ -24,14 +24,14 @@ package_name:
 tag_name:
 commit_sha: 81fc05e89c81d7299c56e0cccc9b7f4cd503baa8
 branch_name: fix_diff_reportduringwarmup
-test_run: false
+test_run: true
 pull_request_issue_id: ''
 pull_request_base_repository: ''
 pull_request_base_ref: ''
 device_id: x86_64-Linux-Ubuntu-24.04-gcc-13.3-UnitTestsCoverage-RelWithDebInfo
-pending: true
-build_time:
-test_time:
+pending: false
+build_time: 216.794656592
+test_time: 6.868312902
 package_time:
 install_time:
 results_repository: Myoldmopar/EnergyPlusBuildResults
@@ -40,11 +40,16 @@ machine_ip: 192.168.1.113
 coverage_enabled: true
 coverage_pass_limit: 41.0
 coverage_warn_limit: 40.0
-coverage_lines: 0
-coverage_total_lines: 0
-coverage_functions: 0
-coverage_total_functions: 0
-coverage_url:
+coverage_lines: 460
+coverage_total_lines: 771
+coverage_functions: 53
+coverage_total_functions: 90
+coverage_url: 'Error uploading files: Failed to upload /home/elee/ci/clone_branch/build/lcov-html/index-sort-l.html
+  to energyplus/coverage/2025-08-27-EnergyPlus-81fc05e89c-x86_64-gcc-13.3UTCRWDI/index-sort-l.html:
+  An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The
+  AWS Access Key Id you provided does not exist in our records.
+
+  '
 asset_url:
 performance_total_time:
 performance_test_count: 0
@@ -61,7 +66,343 @@ valgrind_counters_total_indirect_jump_misses:
 
   ],
   "test_results": [
+    {
+      "name": "API.TestFunctionalC",
+      "status": "notrun",
+      "time": 0,
+      "output": "",
+      "parsed_errors": [
 
+      ],
+      "failure_type": "notrun"
+    },
+    {
+      "name": "API.TestRuntimeC",
+      "status": "notrun",
+      "time": 0,
+      "output": "",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "notrun"
+    },
+    {
+      "name": "API.TestRuntimeResetStateC",
+      "status": "notrun",
+      "time": 0,
+      "output": "",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "notrun"
+    },
+    {
+      "name": "API.TestRuntimeDeleteStateC",
+      "status": "notrun",
+      "time": 0,
+      "output": "",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "notrun"
+    },
+    {
+      "name": "API.TestDataTransferC",
+      "status": "notrun",
+      "time": 0,
+      "output": "",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "notrun"
+    },
+    {
+      "name": "energyplus.TestNonASCIIDirsAndFiles.NoPlugin.FromWithin",
+      "status": "notrun",
+      "time": 0,
+      "output": "",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "notrun"
+    },
+    {
+      "name": "energyplus.TestNonASCIIDirsAndFiles.NoPlugin.FromOutside",
+      "status": "notrun",
+      "time": 0,
+      "output": "",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "notrun"
+    },
+    {
+      "name": "energyplus.TestNonASCIIDirsAndFiles.PythonPlugin.FromWithin",
+      "status": "notrun",
+      "time": 0,
+      "output": "",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "notrun"
+    },
+    {
+      "name": "energyplus.TestNonASCIIDirsAndFiles.PythonPlugin.FromOutside",
+      "status": "notrun",
+      "time": 0,
+      "output": "",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "notrun"
+    },
+    {
+      "name": "energyplus_tests_NOT_BUILT",
+      "status": "notrun",
+      "time": 0,
+      "output": "",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "notrun"
+    },
+    {
+      "name": "FMUParser",
+      "status": "passed",
+      "time": "0.0124642",
+      "output": null,
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "API.LegacyCallbackTest",
+      "status": "failed",
+      "time": "0.048372",
+      "output": "Executing TestEnergyPlusCallbacks from TEST_EXE-NOTFOUND\nPassing run directory as tst/api_callback\nCMake Error at /home/elee/ci/clone_branch/cmake/RunCallbackTest.cmake:25 (file):\n  file failed to open for reading (No such file or directory):\n\n    /home/elee/ci/clone_branch/build/tst/api_callback/eplusout.end\n\n\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "Failed"
+    },
+    {
+      "name": "API.TestRuntimePython",
+      "status": "failed",
+      "time": "0.0570271",
+      "output": "Traceback (most recent call last):\n  File \"/home/elee/ci/clone_branch/tst/EnergyPlus/api/TestRuntime.py\", line 85, in <module>\n    api = EnergyPlusAPI()\n          ^^^^^^^^^^^^^^^\n  File \"/home/elee/ci/clone_branch/build/Products/pyenergyplus/api.py\", line 126, in __init__\n    self.api = cdll.LoadLibrary(api_path())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 460, in LoadLibrary\n    return self._dlltype(name)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 379, in __init__\n    self._handle = _dlopen(self._name, mode)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: /home/elee/ci/clone_branch/build/Products/libenergyplusapi.so: cannot open shared object file: No such file or directory\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "Failed"
+    },
+    {
+      "name": "API.TestRuntimeResetStatePython",
+      "status": "failed",
+      "time": "0.0575779",
+      "output": "Traceback (most recent call last):\n  File \"/home/elee/ci/clone_branch/tst/EnergyPlus/api/TestRuntimeResetState.py\", line 64, in <module>\n    api = EnergyPlusAPI()\n          ^^^^^^^^^^^^^^^\n  File \"/home/elee/ci/clone_branch/build/Products/pyenergyplus/api.py\", line 126, in __init__\n    self.api = cdll.LoadLibrary(api_path())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 460, in LoadLibrary\n    return self._dlltype(name)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 379, in __init__\n    self._handle = _dlopen(self._name, mode)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: /home/elee/ci/clone_branch/build/Products/libenergyplusapi.so: cannot open shared object file: No such file or directory\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "Failed"
+    },
+    {
+      "name": "API.TestRuntimeDeleteStatePython",
+      "status": "failed",
+      "time": "0.0580354",
+      "output": "Traceback (most recent call last):\n  File \"/home/elee/ci/clone_branch/tst/EnergyPlus/api/TestRuntimeDeleteState.py\", line 64, in <module>\n    api = EnergyPlusAPI()\n          ^^^^^^^^^^^^^^^\n  File \"/home/elee/ci/clone_branch/build/Products/pyenergyplus/api.py\", line 126, in __init__\n    self.api = cdll.LoadLibrary(api_path())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 460, in LoadLibrary\n    return self._dlltype(name)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 379, in __init__\n    self._handle = _dlopen(self._name, mode)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: /home/elee/ci/clone_branch/build/Products/libenergyplusapi.so: cannot open shared object file: No such file or directory\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "Failed"
+    },
+    {
+      "name": "APISimulation.user_defined_equipment.py",
+      "status": "failed",
+      "time": "0.0560888",
+      "output": "Traceback (most recent call last):\n  File \"/home/elee/ci/clone_branch/testfiles/API/user_defined_equipment.py\", line 72, in <module>\n    from energyplus_api_helpers.import_helper import EPlusAPIHelper\nModuleNotFoundError: No module named 'energyplus_api_helpers'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/elee/ci/clone_branch/testfiles/API/user_defined_equipment.py\", line 81, in <module>\n    api_ = EnergyPlusAPI()\n           ^^^^^^^^^^^^^^^\n  File \"/home/elee/ci/clone_branch/build/Products/pyenergyplus/api.py\", line 126, in __init__\n    self.api = cdll.LoadLibrary(api_path())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 460, in LoadLibrary\n    return self._dlltype(name)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 379, in __init__\n    self._handle = _dlopen(self._name, mode)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: /home/elee/ci/clone_branch/build/Products/libenergyplusapi.so: cannot open shared object file: No such file or directory\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "Failed"
+    },
+    {
+      "name": "API.test_OutputFiles",
+      "status": "failed",
+      "time": "0.0611145",
+      "output": "E\n======================================================================\nERROR: setUpClass (__main__.TestAPIFlushOutput)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/home/elee/ci/clone_branch/tst/EnergyPlus/api/test_OutputFiles.py\", line 86, in setUpClass\n    cls.api = EnergyPlusAPI()\n              ^^^^^^^^^^^^^^^\n  File \"/home/elee/ci/clone_branch/build/Products/pyenergyplus/api.py\", line 126, in __init__\n    self.api = cdll.LoadLibrary(api_path())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 460, in LoadLibrary\n    return self._dlltype(name)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 379, in __init__\n    self._handle = _dlopen(self._name, mode)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: /home/elee/ci/clone_branch/build/Products/libenergyplusapi.so: cannot open shared object file: No such file or directory\n\n----------------------------------------------------------------------\nRan 0 tests in 0.001s\n\nFAILED (errors=1)\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "Failed"
+    },
+    {
+      "name": "API.test_DataTransferTypes",
+      "status": "failed",
+      "time": "0.0706007",
+      "output": "Traceback (most recent call last):\n  File \"/home/elee/ci/clone_branch/tst/EnergyPlus/api/test_DataTransferTypes.py\", line 61, in <module>\n    api = EnergyPlusAPI()\n          ^^^^^^^^^^^^^^^\n  File \"/home/elee/ci/clone_branch/build/Products/pyenergyplus/api.py\", line 126, in __init__\n    self.api = cdll.LoadLibrary(api_path())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 460, in LoadLibrary\n    return self._dlltype(name)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 379, in __init__\n    self._handle = _dlopen(self._name, mode)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: /home/elee/ci/clone_branch/build/Products/libenergyplusapi.so: cannot open shared object file: No such file or directory\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "Failed"
+    },
+    {
+      "name": "API.Runtime.PythonPlugin.TestRuntimeReleasesTheGIL",
+      "status": "failed",
+      "time": "0.0718499",
+      "output": "Traceback (most recent call last):\n  File \"/home/elee/ci/clone_branch/tst/EnergyPlus/api/TestRuntimeReleasesTheGIL.py\", line 60, in <module>\n    api = EnergyPlusAPI()\n          ^^^^^^^^^^^^^^^\n  File \"/home/elee/ci/clone_branch/build/Products/pyenergyplus/api.py\", line 126, in __init__\n    self.api = cdll.LoadLibrary(api_path())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 460, in LoadLibrary\n    return self._dlltype(name)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 379, in __init__\n    self._handle = _dlopen(self._name, mode)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: /home/elee/ci/clone_branch/build/Products/libenergyplusapi.so: cannot open shared object file: No such file or directory\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "Failed"
+    },
+    {
+      "name": "API.TestFunctionalPython",
+      "status": "failed",
+      "time": "0.0791579",
+      "output": "Traceback (most recent call last):\n  File \"/home/elee/ci/clone_branch/tst/EnergyPlus/api/TestFunctional.py\", line 60, in <module>\n    api = EnergyPlusAPI()\n          ^^^^^^^^^^^^^^^\n  File \"/home/elee/ci/clone_branch/build/Products/pyenergyplus/api.py\", line 126, in __init__\n    self.api = cdll.LoadLibrary(api_path())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 460, in LoadLibrary\n    return self._dlltype(name)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 379, in __init__\n    self._handle = _dlopen(self._name, mode)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: /home/elee/ci/clone_branch/build/Products/libenergyplusapi.so: cannot open shared object file: No such file or directory\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "Failed"
+    },
+    {
+      "name": "API.TestDataTransferPython",
+      "status": "failed",
+      "time": "0.0766711",
+      "output": "Traceback (most recent call last):\n  File \"/home/elee/ci/clone_branch/tst/EnergyPlus/api/TestDataTransfer.py\", line 169, in <module>\n    api = EnergyPlusAPI()\n          ^^^^^^^^^^^^^^^\n  File \"/home/elee/ci/clone_branch/build/Products/pyenergyplus/api.py\", line 126, in __init__\n    self.api = cdll.LoadLibrary(api_path())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 460, in LoadLibrary\n    return self._dlltype(name)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 379, in __init__\n    self._handle = _dlopen(self._name, mode)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: /home/elee/ci/clone_branch/build/Products/libenergyplusapi.so: cannot open shared object file: No such file or directory\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "Failed"
+    },
+    {
+      "name": "API.test_SysExit",
+      "status": "failed",
+      "time": "0.084006",
+      "output": "E\n======================================================================\nERROR: setUpClass (__main__.TestAPISysExit)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/home/elee/ci/clone_branch/tst/EnergyPlus/api/test_SysExit.py\", line 73, in setUpClass\n    cls.api = EnergyPlusAPI()\n              ^^^^^^^^^^^^^^^\n  File \"/home/elee/ci/clone_branch/build/Products/pyenergyplus/api.py\", line 126, in __init__\n    self.api = cdll.LoadLibrary(api_path())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 460, in LoadLibrary\n    return self._dlltype(name)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/elee/.pyenv/versions/3.12.2/lib/python3.12/ctypes/__init__.py\", line 379, in __init__\n    self._handle = _dlopen(self._name, mode)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: /home/elee/ci/clone_branch/build/Products/libenergyplusapi.so: cannot open shared object file: No such file or directory\n\n----------------------------------------------------------------------\nRan 0 tests in 0.001s\n\nFAILED (errors=1)\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "Failed"
+    },
+    {
+      "name": "API.PluginTesterTester",
+      "status": "failed",
+      "time": "0.111546",
+      "output": "   OK : File path exists at: /home/elee/ci/clone_branch/testfiles/PythonPluginCustomTrendVariable.py\n   OK : File ends with .py\n   OK : Python import succeeded\n INFO : Encountered class: \"CalculateAverageTrend\", testing now...\n   OK : Basic inheritance checks out OK for class: CalculateAverageTrend\nERROR : Instantiation of derived class malfunctioning; reason: /home/elee/ci/clone_branch/build/Products/libenergyplusapi.so: cannot open shared object file: No such file or directory\n",
+      "parsed_errors": [
+        {
+          "filename": "OK",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "File",
+          "message": "path /home/elee/ci/clone_branch/testfiles/PythonPluginCustomTrendVariable.py"
+        },
+        {
+          "filename": "INFO",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Encountered",
+          "message": "class \"CalculateAverageTrend\", testing now..."
+        },
+        {
+          "filename": "OK",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Basic",
+          "message": "inheritance CalculateAverageTrend"
+        },
+        {
+          "filename": "ERROR",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Instantiation",
+          "message": "of /home/elee/ci/clone_branch/build/Products/libenergyplusapi.so: cannot open shared object file: No such file or directory"
+        }
+      ],
+      "failure_type": "Failed"
+    },
+    {
+      "name": "Basement.AutoGriddingDepthIsTooHigh",
+      "status": "passed",
+      "time": "0.136798",
+      "output": " Completed Reading Weather File\n Done Parsing The Energyplus Weather File\n\n You have selected to use an equivalent foundation based on the\n area to perimeter ratio supplied in the IDF file.\n\n\n You have selected to have the solution grid sized automatically.\n\nSTOP GroundTempCalc Terminated--Error(s) Detected.\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "Basement.AutoGriddingDepthIsLowish",
+      "status": "passed",
+      "time": "0.306225",
+      "output": " Completed Reading Weather File\n Done Parsing The Energyplus Weather File\n\n You have selected to use an equivalent foundation based on the\n area to perimeter ratio supplied in the IDF file.\n\n\n You have selected to have the solution grid sized automatically.\n\n       YZ Wall TS         Inside      YZ Heat flux     Base T\n       XZ Wall TS         Inside      XZ Heat flux     Base T\n       Floor TS       Inside      Floor heat flux     Base T\n       YZ CL           XZ CL           FX CL           FY CL\n  TSYZUp    TSYZUpIn     TSYZLo     TSYZLoIn    Upper q     Lower q     Base T\n  TSXZUp    TSXZUpIn     TSXZLo     TSXZLoIn    Upper q     Lower q     Base T\n  TFPerim   TFPerimIn     TFCore    TFCoreIn      Perim q   Core q     Base T\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D so...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "Basement.AutoGriddingDepthIsHigh",
+      "status": "passed",
+      "time": "0.446211",
+      "output": " Completed Reading Weather File\n Done Parsing The Energyplus Weather File\n\n You have selected to use an equivalent foundation based on the\n area to perimeter ratio supplied in the IDF file.\n\n\n You have selected to have the solution grid sized automatically.\n\n       YZ Wall TS         Inside      YZ Heat flux     Base T\n       XZ Wall TS         Inside      XZ Heat flux     Base T\n       Floor TS       Inside      Floor heat flux     Base T\n       YZ CL           XZ CL           FX CL           FY CL\n  TSYZUp    TSYZUpIn     TSYZLo     TSYZLoIn    Upper q     Lower q     Base T\n  TSXZUp    TSXZUpIn     TSXZLo     TSXZLoIn    Upper q     Lower q     Base T\n  TFPerim   TFPerimIn     TFCore    TFCoreIn      Perim q   Core q     Base T\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D so...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "ConvertInputFormat.DDYtoEPJSON",
+      "status": "passed",
+      "time": "4.92632",
+      "output": "Input file converted to EPJSON successfully | 1/1 | /home/elee/ci/clone_branch/src/ConvertInputFormat/../../weather/USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.ddy\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "ConvertInputFormat.RegularFile_RelativePath",
+      "status": "passed",
+      "time": "4.98448",
+      "output": "Input file converted to EPJSON successfully | 1/1 | 1ZoneUncontrolled.idf\nNamespace(convertinputformat_exe=PosixPath('/home/elee/ci/clone_branch/build/Products/ConvertInputFormat-25.2.0'), out_dir=PosixPath('RegularFile_AbsolutePath'), input_file=PosixPath('1ZoneUncontrolled.idf'), expected_filename=PosixPath('1ZoneUncontrolled.epJSON'))\nRunning: /home/elee/ci/clone_branch/build/Products/ConvertInputFormat-25.2.0 --output RegularFile_AbsolutePath 1ZoneUncontrolled.idf\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "ConvertInputFormat.ExtraDotFile__RelativePath",
+      "status": "passed",
+      "time": "4.94003",
+      "output": "Input file converted to EPJSON successfully | 1/1 | 1.ZoneUncontrolled.idf\nNamespace(convertinputformat_exe=PosixPath('/home/elee/ci/clone_branch/build/Products/ConvertInputFormat-25.2.0'), out_dir=PosixPath('ExtraDotFile__RelativePath'), input_file=PosixPath('1.ZoneUncontrolled.idf'), expected_filename=PosixPath('1.ZoneUncontrolled.epJSON'))\nRunning: /home/elee/ci/clone_branch/build/Products/ConvertInputFormat-25.2.0 --output ExtraDotFile__RelativePath 1.ZoneUncontrolled.idf\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "ConvertInputFormat.ExtraDotFile_AbsolutePath",
+      "status": "passed",
+      "time": "4.95511",
+      "output": "Input file converted to EPJSON successfully | 1/1 | /home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/1.ZoneUncontrolled.idf\nNamespace(convertinputformat_exe=PosixPath('/home/elee/ci/clone_branch/build/Products/ConvertInputFormat-25.2.0'), out_dir=PosixPath('/home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/ExtraDotFile_AbsolutePath'), input_file=PosixPath('/home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/1.ZoneUncontrolled.idf'), expected_filename=PosixPath('1.ZoneUncontrolled.epJSON'))\nRunning: /home/elee/ci/clone_branch/build/Products/ConvertInputFormat-25.2.0 --output /home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/ExtraDotFile_AbsolutePath /home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/1.ZoneUncontrolled.idf\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "ConvertInputFormat.RegularFile_AbsolutePath",
+      "status": "passed",
+      "time": "5.01429",
+      "output": "Input file converted to EPJSON successfully | 1/1 | /home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/1ZoneUncontrolled.idf\nNamespace(convertinputformat_exe=PosixPath('/home/elee/ci/clone_branch/build/Products/ConvertInputFormat-25.2.0'), out_dir=PosixPath('/home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/RegularFile_AbsolutePath'), input_file=PosixPath('/home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/1ZoneUncontrolled.idf'), expected_filename=PosixPath('1ZoneUncontrolled.epJSON'))\nRunning: /home/elee/ci/clone_branch/build/Products/ConvertInputFormat-25.2.0 --output /home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/RegularFile_AbsolutePath /home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/1ZoneUncontrolled.idf\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    }
   ],
   "failure": null,
   "package_results": [
@@ -72,14 +413,14 @@ valgrind_counters_total_indirect_jump_misses:
     "permalink": "EnergyPlus-81fc05e89c81d7299c56e0cccc9b7f4cd503baa8-x86_64-Linux-Ubuntu-24.04-gcc-13.3-UnitTestsCoverage-RelWithDebInfo.html",
     "tags": "data",
     "layout": "ci_results",
-    "date": "2025-08-27 16:11:05",
+    "date": "2025-08-27 16:14:59",
     "unhandled_failure": false,
     "build_error_count": 0,
     "build_warning_count": 0,
     "package_error_count": 0,
     "package_warning_count": 0,
-    "test_count": 0,
-    "test_passed_count": 0,
+    "test_count": 31,
+    "test_passed_count": 9,
     "repository": "NREL/EnergyPlus",
     "compiler": "gcc",
     "compiler_version": "13.3",
@@ -93,14 +434,14 @@ valgrind_counters_total_indirect_jump_misses:
     "tag_name": null,
     "commit_sha": "81fc05e89c81d7299c56e0cccc9b7f4cd503baa8",
     "branch_name": "fix_diff_reportduringwarmup",
-    "test_run": false,
+    "test_run": true,
     "pull_request_issue_id": "",
     "pull_request_base_repository": "",
     "pull_request_base_ref": "",
     "device_id": "x86_64-Linux-Ubuntu-24.04-gcc-13.3-UnitTestsCoverage-RelWithDebInfo",
-    "pending": true,
-    "build_time": null,
-    "test_time": null,
+    "pending": false,
+    "build_time": 216.794656592,
+    "test_time": 6.868312902,
     "package_time": null,
     "install_time": null,
     "results_repository": "Myoldmopar/EnergyPlusBuildResults",
@@ -109,11 +450,11 @@ valgrind_counters_total_indirect_jump_misses:
     "coverage_enabled": true,
     "coverage_pass_limit": 41.0,
     "coverage_warn_limit": 40.0,
-    "coverage_lines": 0,
-    "coverage_total_lines": 0,
-    "coverage_functions": 0,
-    "coverage_total_functions": 0,
-    "coverage_url": null,
+    "coverage_lines": 460,
+    "coverage_total_lines": 771,
+    "coverage_functions": 53,
+    "coverage_total_functions": 90,
+    "coverage_url": "Error uploading files: Failed to upload /home/elee/ci/clone_branch/build/lcov-html/index-sort-l.html to energyplus/coverage/2025-08-27-EnergyPlus-81fc05e89c-x86_64-gcc-13.3UTCRWDI/index-sort-l.html: An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.\n",
     "asset_url": null,
     "performance_total_time": null,
     "performance_test_count": 0,
