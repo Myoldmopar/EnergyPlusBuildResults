@@ -3,9 +3,9 @@ title: EnergyPlus-17d5e122323b954cc7f187199932d616edc40032-x86_64-Linux-Ubuntu-2
 permalink: EnergyPlus-17d5e122323b954cc7f187199932d616edc40032-x86_64-Linux-Ubuntu-24.04-gcc-13.3-IntegrationCoverage-RelWithDebInfo.html
 tags: data
 layout: ci_results
-date: '2025-08-29 22:09:08'
+date: '2025-08-29 22:10:23'
 unhandled_failure: false
-build_error_count: 0
+build_error_count: 1
 build_warning_count: 0
 package_error_count: 0
 package_warning_count: 0
@@ -29,9 +29,9 @@ pull_request_issue_id: ''
 pull_request_base_repository: ''
 pull_request_base_ref: ''
 device_id: x86_64-Linux-Ubuntu-24.04-gcc-13.3-IntegrationCoverage-RelWithDebInfo
-pending: true
-build_time:
-test_time:
+pending: false
+build_time: 67.162325089
+test_time: 1.02080291
 package_time:
 install_time:
 results_repository: Myoldmopar/EnergyPlusBuildResults
@@ -44,7 +44,12 @@ coverage_lines: 0
 coverage_total_lines: 0
 coverage_functions: 0
 coverage_total_functions: 0
-coverage_url:
+coverage_url: 'Error uploading files: Failed to upload /home/elee/ci/clone_branch/build/lcov-html/cmd_line
+  to energyplus/coverage/2025-08-29-EnergyPlus-17d5e12232-x86_64-gcc-13.3ICRWDI/cmd_line:
+  An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The
+  AWS Access Key Id you provided does not exist in our records.
+
+  '
 asset_url:
 performance_total_time:
 performance_test_count: 0
@@ -58,7 +63,13 @@ valgrind_counters_total_indirect_jump_misses:
 ---
 {
   "build_results": [
-
+    {
+      "filename": "src/ConvertInputFormat/CMakeLists.txt",
+      "linenumber": "13",
+      "colnumber": 0,
+      "messagetype": "error",
+      "message": "if given arguments:; ; \"OR\" \"OFF\""
+    }
   ],
   "test_results": [
 
@@ -72,9 +83,9 @@ valgrind_counters_total_indirect_jump_misses:
     "permalink": "EnergyPlus-17d5e122323b954cc7f187199932d616edc40032-x86_64-Linux-Ubuntu-24.04-gcc-13.3-IntegrationCoverage-RelWithDebInfo.html",
     "tags": "data",
     "layout": "ci_results",
-    "date": "2025-08-29 22:09:08",
+    "date": "2025-08-29 22:10:23",
     "unhandled_failure": false,
-    "build_error_count": 0,
+    "build_error_count": 1,
     "build_warning_count": 0,
     "package_error_count": 0,
     "package_warning_count": 0,
@@ -98,9 +109,9 @@ valgrind_counters_total_indirect_jump_misses:
     "pull_request_base_repository": "",
     "pull_request_base_ref": "",
     "device_id": "x86_64-Linux-Ubuntu-24.04-gcc-13.3-IntegrationCoverage-RelWithDebInfo",
-    "pending": true,
-    "build_time": null,
-    "test_time": null,
+    "pending": false,
+    "build_time": 67.162325089,
+    "test_time": 1.02080291,
     "package_time": null,
     "install_time": null,
     "results_repository": "Myoldmopar/EnergyPlusBuildResults",
@@ -113,7 +124,7 @@ valgrind_counters_total_indirect_jump_misses:
     "coverage_total_lines": 0,
     "coverage_functions": 0,
     "coverage_total_functions": 0,
-    "coverage_url": null,
+    "coverage_url": "Error uploading files: Failed to upload /home/elee/ci/clone_branch/build/lcov-html/cmd_line to energyplus/coverage/2025-08-29-EnergyPlus-17d5e12232-x86_64-gcc-13.3ICRWDI/cmd_line: An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.\n",
     "asset_url": null,
     "performance_total_time": null,
     "performance_test_count": 0,
