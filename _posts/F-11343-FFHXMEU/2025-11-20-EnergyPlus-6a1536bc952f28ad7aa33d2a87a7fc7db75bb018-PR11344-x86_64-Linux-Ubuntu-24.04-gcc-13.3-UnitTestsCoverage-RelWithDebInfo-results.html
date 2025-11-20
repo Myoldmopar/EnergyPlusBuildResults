@@ -3,14 +3,14 @@ title: EnergyPlus-6a1536bc952f28ad7aa33d2a87a7fc7db75bb018-PR11344-x86_64-Linux-
 permalink: EnergyPlus-6a1536bc952f28ad7aa33d2a87a7fc7db75bb018-PR11344-x86_64-Linux-Ubuntu-24.04-gcc-13.3-UnitTestsCoverage-RelWithDebInfo.html
 tags: data
 layout: ci_results
-date: '2025-11-20 21:33:01'
+date: '2025-11-20 21:37:09'
 unhandled_failure: false
-build_error_count: 0
+build_error_count: 1
 build_warning_count: 0
 package_error_count: 0
 package_warning_count: 0
-test_count: 0
-test_passed_count: 0
+test_count: 31
+test_passed_count: 30
 repository: bigladder/EnergyPlus
 compiler: gcc
 compiler_version: '13.3'
@@ -24,14 +24,14 @@ package_name:
 tag_name:
 commit_sha: 6a1536bc952f28ad7aa33d2a87a7fc7db75bb018
 branch_name: Fix-11343-FFHX-metering-end-uses
-test_run: false
+test_run: true
 pull_request_issue_id: '11344'
 pull_request_base_repository: NREL/EnergyPlus
 pull_request_base_ref: develop
 device_id: x86_64-Linux-Ubuntu-24.04-gcc-13.3-UnitTestsCoverage-RelWithDebInfo
-pending: true
-build_time:
-test_time:
+pending: false
+build_time: 172.559818305
+test_time: 16.213607534
 package_time:
 install_time:
 results_repository: Myoldmopar/EnergyPlusBuildResults
@@ -40,11 +40,16 @@ machine_ip: 192.168.50.236
 coverage_enabled: true
 coverage_pass_limit: 41.0
 coverage_warn_limit: 40.0
-coverage_lines: 0
-coverage_total_lines: 0
-coverage_functions: 0
-coverage_total_functions: 0
-coverage_url:
+coverage_lines: 54986
+coverage_total_lines: 367218
+coverage_functions: 3852
+coverage_total_functions: 11904
+coverage_url: 'Error uploading files: Failed to upload /home/elee/ci/clone_branch/build/lcov-html/index-sort-l.html
+  to energyplus/coverage/2025-11-20-EnergyPlus-6a1536bc95-PR11344-x86_64-gcc-13.3UTCRWDI/index-sort-l.html:
+  An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The
+  AWS Access Key Id you provided does not exist in our records.
+
+  '
 asset_url:
 performance_total_time:
 performance_test_count: 0
@@ -58,10 +63,605 @@ valgrind_counters_total_indirect_jump_misses:
 ---
 {
   "build_results": [
-
+    {
+      "filename": "tst/EnergyPlus/unit/PlantHeatExchangerFluidToFluid.unit.cc",
+      "linenumber": "2533",
+      "colnumber": "28",
+      "messagetype": "error",
+      "message": "loop variable ‘validEndUse’ creates a copy from type ‘const std::string’ {aka ‘const std::__cxx11::basic_string<char>’} [-Werror=range-loop-construct]"
+    }
   ],
   "test_results": [
+    {
+      "name": "FMUParser",
+      "status": "passed",
+      "time": "0.00819005",
+      "output": null,
+      "parsed_errors": [
 
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "API.PluginTesterTester",
+      "status": "passed",
+      "time": "0.268194",
+      "output": "   OK : File path exists at: /home/elee/ci/clone_branch/testfiles/PythonPluginCustomTrendVariable.py\n   OK : File ends with .py\n   OK : Python import succeeded\n INFO : Encountered class: \"CalculateAverageTrend\", testing now...\n   OK : Basic inheritance checks out OK for class: CalculateAverageTrend\n   OK : Instantiation of derived class works\n   OK : Overridden on_end_of_zone_timestep_before_zone_reporting() function execution works\n   OK : on_end_of_zone_timestep_before_zone_reporting() returns an int, this is the expected condition\n INFO : Encountered class: \"EnergyPlusPlugin\", testing now...\n INFO : Skipping the actual plugin base class: EnergyPlusPlugin\n INFO : Encountered class: \"deque\", testing now...\n INFO : Skipping class that does not inherit plugin base class: deque\n   OK : Found 1 successful EnergyPlusPlugin classes:\n   OK :   CalculateAverageTrend\n",
+      "parsed_errors": [
+        {
+          "filename": "OK",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "File",
+          "message": "path /home/elee/ci/clone_branch/testfiles/PythonPluginCustomTrendVariable.py"
+        },
+        {
+          "filename": "INFO",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Encountered",
+          "message": "class \"CalculateAverageTrend\", testing now..."
+        },
+        {
+          "filename": "OK",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Basic",
+          "message": "inheritance CalculateAverageTrend"
+        },
+        {
+          "filename": "INFO",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Encountered",
+          "message": "class \"EnergyPlusPlugin\", testing now..."
+        },
+        {
+          "filename": "INFO",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Skipping",
+          "message": "the EnergyPlusPlugin"
+        },
+        {
+          "filename": "INFO",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Encountered",
+          "message": "class \"deque\", testing now..."
+        },
+        {
+          "filename": "INFO",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Skipping",
+          "message": "class deque"
+        }
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "API.TestFunctionalC",
+      "status": "passed",
+      "time": "1.38147",
+      "output": "C API Test: Calculated props at T= 5.0: 4198.0000, 999.9000,   0.5705,   0.0015 \nC API Test: Calculated props at T=15.0: 4185.0000, 999.1000,   0.5893,   0.0011 \nC API Test: Calculated props at T=25.0: 4179.0000, 997.0000,   0.6072,   0.0009 \nC API Test: Saturated Properties: At 100C, Psat=101400.0000; at 100000Pa, Tsat= 99.6056\nC API Test: Sat Liq at 100C: rho=958.3000, Cp=4216.0000, h=419200.0000\nC API Test: Sat Vap at 100C: rho=  0.6000, Cp=2080.0000, h=2676000.0000\nC API Test: Psych props, test point is about 101325Pa, 24C, 50% humidity:\nC API Test: Expected DB ~ 24 C; Calculated:  24.9533\nC API Test: Expected RH ~ 0.5; Calculated:   0.4916,   0.4842\nC API Test: Expected HumRat ~ 0.009; Calculated:   0.0094,   0.0093,   0.0093,   0.0092\nC API Test: Expected Tsat ~ 17 C; Calculated:  17.0772\nC API Test: Expected Psat ~ 2985 Pa; Calculated: 2985.1271\nC API Test: Expected Enth ~ 48000 J/kg; Calculated: 47026.1532, 47787.3465\nC API Test: Expected v ~ 0.855 m3/kg; Calculated:   0.8545\nC API Test: Expected rho ...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+        {
+          "filename": "C API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Calculated",
+          "message": "props 4198.0000, 999.9000,   0.5705,   0.0015 "
+        },
+        {
+          "filename": "C API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Calculated",
+          "message": "props 4185.0000, 999.1000,   0.5893,   0.0011 "
+        },
+        {
+          "filename": "C API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Calculated",
+          "message": "props 4179.0000, 997.0000,   0.6072,   0.0009 "
+        },
+        {
+          "filename": "C API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Saturated",
+          "message": "Properties At 100C, Psat=101400.0000; at 100000Pa, Tsat= 99.6056"
+        },
+        {
+          "filename": "C API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Sat",
+          "message": "Liq rho=958.3000, Cp=4216.0000, h=419200.0000"
+        },
+        {
+          "filename": "C API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Sat",
+          "message": "Vap rho=  0.6000, Cp=2080.0000, h=2676000.0000"
+        },
+        {
+          "filename": "C API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Expected",
+          "message": "DB  24.9533"
+        },
+        {
+          "filename": "C API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Expected",
+          "message": "RH   0.4916,   0.4842"
+        },
+        {
+          "filename": "C API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Expected",
+          "message": "HumRat   0.0094,   0.0093,   0.0093,   0.0092"
+        },
+        {
+          "filename": "C API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Expected",
+          "message": "Tsat  17.0772"
+        },
+        {
+          "filename": "C API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Expected",
+          "message": "Psat 2985.1271"
+        },
+        {
+          "filename": "C API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Expected",
+          "message": "Enth 47026.1532, 47787.3465"
+        },
+        {
+          "filename": "C API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Expected",
+          "message": "v   0.8545"
+        }
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "API.TestFunctionalPython",
+      "status": "passed",
+      "time": "1.45241",
+      "output": "Python API Test: Calculated properties at T=5.0: 4198.000000, 999.900000, 0.570500, 0.001518\nPython API Test: Calculated properties at T=15.0: 4185.000000, 999.100000, 0.589300, 0.001138\nPython API Test: Calculated properties at T=25.0: 4179.000000, 997.000000, 0.607200, 0.000890\nPython API Test: Saturated Properties: At 100C, Psat=101400.0000; at 100000Pa, Tsat= 99.6056\nC API Test: Sat Liq at 100C: rho=958.3000, Cp=4216.0000, h=419200.0000\nC API Test: Sat Vap at 100C: rho=  0.6000, Cp=2080.0000, h=2676000.0000\nPython API Test: Psych props, test point is about 101325Pa, 24C, 50%% humidity:\nPython API Test: Expected DB ~ 24 C Calculated:  24.9533\nPython API Test: Expected RH ~ 0.5 Calculated:   0.4916,   0.4842\nPython API Test: Expected HumRat ~ 0.009 Calculated:   0.0094,   0.0093,   0.0093,   0.0092\nPython API Test: Expected Tsat ~ 17 C Calculated:  17.0772\nPython API Test: Expected Psat ~ 2985 Pa Calculated: 2985.1271\nPython API Test: Expected Enth ~ 0.48000 J/kg Calculated: 47026.1532, 47787.3465\nPython AP...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+        {
+          "filename": "Python API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Calculated",
+          "message": "properties 4198.000000, 999.900000, 0.570500, 0.001518"
+        },
+        {
+          "filename": "Python API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Calculated",
+          "message": "properties 4185.000000, 999.100000, 0.589300, 0.001138"
+        },
+        {
+          "filename": "Python API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Calculated",
+          "message": "properties 4179.000000, 997.000000, 0.607200, 0.000890"
+        },
+        {
+          "filename": "Python API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Saturated",
+          "message": "Properties At 100C, Psat=101400.0000; at 100000Pa, Tsat= 99.6056"
+        },
+        {
+          "filename": "C API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Sat",
+          "message": "Liq rho=958.3000, Cp=4216.0000, h=419200.0000"
+        },
+        {
+          "filename": "C API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Sat",
+          "message": "Vap rho=  0.6000, Cp=2080.0000, h=2676000.0000"
+        },
+        {
+          "filename": "Python API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Expected",
+          "message": "DB  24.9533"
+        },
+        {
+          "filename": "Python API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Expected",
+          "message": "RH   0.4916,   0.4842"
+        },
+        {
+          "filename": "Python API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Expected",
+          "message": "HumRat   0.0094,   0.0093,   0.0093,   0.0092"
+        },
+        {
+          "filename": "Python API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Expected",
+          "message": "Tsat  17.0772"
+        },
+        {
+          "filename": "Python API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Expected",
+          "message": "Psat 2985.1271"
+        },
+        {
+          "filename": "Python API Test",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Expected",
+          "message": "Enth 47026.1532, 47787.3465"
+        }
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "API.test_DataTransferTypes",
+      "status": "passed",
+      "time": "1.52829",
+      "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 1.090s\n\nOK\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "API.LegacyCallbackTest",
+      "status": "passed",
+      "time": "2.32824",
+      "output": "Executing TestEnergyPlusCallbacks from /home/elee/ci/clone_branch/build/Products/TestEnergyPlusCallbacks\nPassing run directory as tst/api_callback\nUsing EnergyPlus as a library.\nEnergyPlusLibrary (message): EnergyPlus Library: Changing directory to: /home/elee/ci/clone_branch/build/tst/api_callback\nEnergyPlus Library: Changing directory to: /home/elee/ci/clone_branch/build/tst/api_callback\nEnergyPlusLibrary (message): Directory change successful.\nDirectory change successful.\nEnergyPlusLibrary (message): EnergyPlus Starting\nEnergyPlus Starting\nEnergyPlusLibrary (message): EnergyPlus, Version 25.2.0-6a1536bc95, YMD=2025.11.20 15:35\nEnergyPlus, Version 25.2.0-6a1536bc95, YMD=2025.11.20 15:35\nEnergyPlusLibrary (message): Adjusting Air System Sizing\nAdjusting Air System Sizing\nEnergyPlusLibrary (message): Adjusting Standard 62.1 Ventilation Sizing\nAdjusting Standard 62.1 Ventilation Sizing\nEnergyPlusLibrary (message): Initializing Simulation\nInitializing Simulation\nEnergyPlusLibrary (message): Initializing Respons...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+        {
+          "filename": "EnergyPlusLibrary (message)",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "EnergyPlus",
+          "message": "Library Changing directory to: /home/elee/ci/clone_branch/build/tst/api_callback"
+        },
+        {
+          "filename": "EnergyPlus Library",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "Changing",
+          "message": "directory /home/elee/ci/clone_branch/build/tst/api_callback"
+        }
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "API.TestDataTransferPython",
+      "status": "passed",
+      "time": "2.62733",
+      "output": "EnergyPlus Starting\nEnergyPlus, Version 25.2.0-6a1536bc95, YMD=2025.11.20 15:35\nAdjusting Air System Sizing\nAdjusting Standard 62.1 Ventilation Sizing\nInitializing Simulation\nReporting Surfaces\nBeginning Primary Simulation\nInitializing New Environment Parameters\nWarming up {1}\nGot an input file path of: /home/elee/ci/clone_branch/testfiles/_1ZoneUncontrolled_ForAPITesting.idf, and weather file path of: /home/elee/ci/clone_branch/weather/USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw\nEMS Global handle lookups worked just fine!\nReading outdoor temp via getVariable, value is: -15.5\nActuated Dew Point temp value is: -15.50000723309717\nCurrent sim time is: 0.250000\nyear: %i, calendarYear: %i\n 2025 0\nNum time steps in hour = 4; Tomorrow's hour 3, timestep 2 temp is: -15.5\nSetting Zn001:Wall001 construction (37) to FLOOR (2\nReading outdoor temp via getVariable, value is: -15.5\nActuated Dew Point temp value is: -25.0\nCurrent sim time is: 0.562500\nyear: %i, calendarYear: %i\n 2025 0\nSetting Zn001:Wall001 construction (37...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+        {
+          "filename": "Got an input file path of",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "/home/elee/ci/clone_branch/testfiles/_1ZoneUncontrolled_ForAPITesting.idf,",
+          "message": "and /home/elee/ci/clone_branch/weather/USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw"
+        },
+        {
+          "filename": "year",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "%i,",
+          "message": "calendarYear %i"
+        },
+        {
+          "filename": "year",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "%i,",
+          "message": "calendarYear %i"
+        }
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "API.test_SysExit",
+      "status": "passed",
+      "time": "1.56567",
+      "output": ".EnergyPlus, Version 25.2.0-6a1536bc95\ninput_file: File does not exist: doesntexist.idf\nRun with --help for more information.\n.\n----------------------------------------------------------------------\nRan 2 tests in 1.127s\n\nOK\n",
+      "parsed_errors": [
+        {
+          "filename": "input_file",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "File",
+          "message": "does doesntexist.idf"
+        }
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "API.TestRuntimeResetStateC",
+      "status": "passed",
+      "time": "3.70697",
+      "output": "EnergyPlus Starting\nEnergyPlus, Version 25.2.0-6a1536bc95, YMD=2025.11.20 15:35\nAdjusting Air System Sizing\nAdjusting Standard 62.1 Ventilation Sizing\nInitializing Simulation\nReporting Surfaces\nBeginning Primary Simulation\nInitializing New Environment Parameters\nCALLBACK: BeginNewEnvironmentHandler1\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nWarming up {7}\nWarming up {8}\nWarming up {9}\nWarming up {10}\nWarming up {11}\nWarming up {12}\nWarming up {13}\nWarming up {14}\nWarming up {15}\nWarming up {16}\nWarming up {17}\nWarming up {18}\nWarming up {19}\nWarming up {20}\nWarming up {21}\nWarming up {22}\nStarting Simulation at 12/21 for DENVER CENTENNIAL  GOLDEN   N ANN HTG 99% CONDNS DB\nInitializing New Environment Parameters\nCALLBACK: BeginNewEnvironmentHandler1\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nWarming up {7}\nWarming up {8}\nWarming up {9}\nWarming up {10}\nWarming up {11}\nWarming up {12}\nWarming up {13}\nWarming up {14}\nWa...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "API.TestRuntimeResetStatePython",
+      "status": "passed",
+      "time": "3.90058",
+      "output": "EnergyPlus Starting\nEnergyPlus, Version 25.2.0-6a1536bc95, YMD=2025.11.20 15:35\nAdjusting Air System Sizing\nAdjusting Standard 62.1 Ventilation Sizing\nInitializing Simulation\nReporting Surfaces\nBeginning Primary Simulation\nInitializing New Environment Parameters\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nWarming up {7}\nWarming up {8}\nWarming up {9}\nWarming up {10}\nWarming up {11}\nWarming up {12}\nWarming up {13}\nWarming up {14}\nWarming up {15}\nWarming up {16}\nWarming up {17}\nWarming up {18}\nWarming up {19}\nWarming up {20}\nWarming up {21}\nWarming up {22}\nStarting Simulation at 12/21 for DENVER CENTENNIAL  GOLDEN   N ANN HTG 99% CONDNS DB\nInitializing New Environment Parameters\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nWarming up {7}\nWarming up {8}\nWarming up {9}\nWarming up {10}\nWarming up {11}\nWarming up {12}\nWarming up {13}\nWarming up {14}\nWarming up {15}\nWarming up {16}\nStarting Simulation at 07/21 for DENVER CENTEN...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "API.TestDataTransferC",
+      "status": "passed",
+      "time": "4.73333",
+      "output": "EnergyPlus Starting\nEnergyPlus, Version 25.2.0-6a1536bc95, YMD=2025.11.20 15:35\nAdjusting Air System Sizing\nAdjusting Standard 62.1 Ventilation Sizing\nInitializing Simulation\nReporting Surfaces\nBeginning Primary Simulation\nInitializing New Environment Parameters\nWarming up {1}\nSTARTING A NEW TIME STEP\nEMS Global handle lookups worked just fine!\nGot handles 3, 0, 1, 37, 1, 2\nGot an input file path of: /home/elee/ci/clone_branch/testfiles/_1ZoneUncontrolled_ForAPITesting.idf, and weather file path of: /home/elee/ci/clone_branch/weather/USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw\nReading outdoor temp via getVariable, value is: -15.5000 \nActuated Dew Point temp value is: -15.5000 \nCurrent Sim Time: 0.25 \nyear: 2025, calendarYear: 0\nSetting Zn001:Wall001 construction (37) to FLOOR (2)STARTING A NEW TIME STEP\nReading outdoor temp via getVariable, value is: -15.5000 \nActuated Dew Point temp value is: -25.0000 \nCurrent Sim Time: 0.56 \nyear: 2025, calendarYear: 0\nSetting Zn001:Wall001 construction (37) to FLOOR (2)ST...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+        {
+          "filename": "Got an input file path of",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "/home/elee/ci/clone_branch/testfiles/_1ZoneUncontrolled_ForAPITesting.idf,",
+          "message": "and /home/elee/ci/clone_branch/weather/USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw"
+        },
+        {
+          "filename": "year",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "2025,",
+          "message": "calendarYear 0"
+        },
+        {
+          "filename": "year",
+          "linenumber": 0,
+          "colnumber": 0,
+          "messagetype": "2025,",
+          "message": "calendarYear 0"
+        }
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "energyplus_tests_NOT_BUILT",
+      "status": "notrun",
+      "time": 0,
+      "output": "",
+      "parsed_errors": [
+
+      ],
+      "failure_type": "notrun"
+    },
+    {
+      "name": "API.TestRuntimePython",
+      "status": "passed",
+      "time": "4.82951",
+      "output": "EnergyPlus Starting\nEnergyPlus, Version 25.2.0-6a1536bc95, YMD=2025.11.20 15:35\nAdjusting Air System Sizing\nAdjusting Standard 62.1 Ventilation Sizing\nInitializing Simulation\nReporting Surfaces\nBeginning Primary Simulation\nInitializing New Environment Parameters\nOH HAI ENVIRONMENT\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nWarming up {7}\nWarming up {8}\nWarming up {9}\nWarming up {10}\nWarming up {11}\nWarming up {12}\nWarming up {13}\nWarming up {14}\nWarming up {15}\nWarming up {16}\nWarming up {17}\nWarming up {18}\nWarming up {19}\nWarming up {20}\nWarming up {21}\nWarming up {22}\nStarting Simulation at 12/21 for DENVER CENTENNIAL  GOLDEN   N ANN HTG 99% CONDNS DB\nInitializing New Environment Parameters\nOH HAI ENVIRONMENT\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nWarming up {7}\nWarming up {8}\nWarming up {9}\nWarming up {10}\nWarming up {11}\nWarming up {12}\nWarming up {13}\nWarming up {14}\nWarming up {15}\nWarming up {16}\nStarting...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "energyplus.TestNonASCIIDirsAndFiles.NoPlugin.FromOutside",
+      "status": "passed",
+      "time": "2.5192",
+      "output": "EnergyPlus Starting\nEnergyPlus, Version 25.2.0-6a1536bc95, YMD=2025.11.20 15:35\nAdjusting Air System Sizing\nAdjusting Standard 62.1 Ventilation Sizing\nInitializing Simulation\nReporting Surfaces\nBeginning Primary Simulation\nInitializing New Environment Parameters\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nWarming up {7}\nWarming up {8}\nWarming up {9}\nWarming up {10}\nWarming up {11}\nWarming up {12}\nWarming up {13}\nWarming up {14}\nWarming up {15}\nWarming up {16}\nWarming up {17}\nWarming up {18}\nWarming up {19}\nWarming up {20}\nWarming up {21}\nWarming up {22}\nStarting Simulation at 12/21 for DENVER CENTENNIAL  GOLDEN   N ANN HTG 99% CONDNS DB\nInitializing New Environment Parameters\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nWarming up {7}\nWarming up {8}\nWarming up {9}\nWarming up {10}\nWarming up {11}\nWarming up {12}\nWarming up {13}\nWarming up {14}\nWarming up {15}\nWarming up {16}\nStarting Simulation at 07/21 for DENVER CENTEN...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "API.TestRuntimeDeleteStateC",
+      "status": "passed",
+      "time": "4.87237",
+      "output": "EnergyPlus Starting\nEnergyPlus, Version 25.2.0-6a1536bc95, YMD=2025.11.20 15:35\nAdjusting Air System Sizing\nAdjusting Standard 62.1 Ventilation Sizing\nInitializing Simulation\nReporting Surfaces\nBeginning Primary Simulation\nInitializing New Environment Parameters\nCALLBACK: BeginNewEnvironmentHandler1\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nWarming up {7}\nWarming up {8}\nWarming up {9}\nWarming up {10}\nWarming up {11}\nWarming up {12}\nWarming up {13}\nWarming up {14}\nWarming up {15}\nWarming up {16}\nWarming up {17}\nWarming up {18}\nWarming up {19}\nWarming up {20}\nWarming up {21}\nWarming up {22}\nStarting Simulation at 12/21 for DENVER CENTENNIAL  GOLDEN   N ANN HTG 99% CONDNS DB\nInitializing New Environment Parameters\nCALLBACK: BeginNewEnvironmentHandler1\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nWarming up {7}\nWarming up {8}\nWarming up {9}\nWarming up {10}\nWarming up {11}\nWarming up {12}\nWarming up {13}\nWarming up {14}\nWa...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "API.test_OutputFiles",
+      "status": "passed",
+      "time": "3.66354",
+      "output": "EnergyPlus Starting\nEnergyPlus, Version 25.2.0-6a1536bc95, YMD=2025.11.20 15:35\nAdjusting Air System Sizing\nAdjusting Standard 62.1 Ventilation Sizing\nInitializing Simulation\nReporting Surfaces\nBeginning Primary Simulation\nInitializing New Environment Parameters\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nWarming up {7}\nWarming up {8}\nWarming up {9}\nWarming up {10}\nWarming up {11}\nWarming up {12}\nWarming up {13}\nWarming up {14}\nWarming up {15}\nWarming up {16}\nWarming up {17}\nWarming up {18}\nWarming up {19}\nWarming up {20}\nWarming up {21}\nWarming up {22}\nStarting Simulation at 12/21 for DENVER CENTENNIAL  GOLDEN   N ANN HTG 99% CONDNS DB\nInitializing New Environment Parameters\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nWarming up {7}\nWarming up {8}\nWarming up {9}\nWarming up {10}\nWarming up {11}\nWarming up {12}\nWarming up {13}\nWarming up {14}\nWarming up {15}\nWarming up {16}\nStarting Simulation at 07/21 for DENVER CENTEN...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "API.TestRuntimeDeleteStatePython",
+      "status": "passed",
+      "time": "5.56055",
+      "output": "EnergyPlus Starting\nEnergyPlus, Version 25.2.0-6a1536bc95, YMD=2025.11.20 15:35\nAdjusting Air System Sizing\nAdjusting Standard 62.1 Ventilation Sizing\nInitializing Simulation\nReporting Surfaces\nBeginning Primary Simulation\nInitializing New Environment Parameters\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nWarming up {7}\nWarming up {8}\nWarming up {9}\nWarming up {10}\nWarming up {11}\nWarming up {12}\nWarming up {13}\nWarming up {14}\nWarming up {15}\nWarming up {16}\nWarming up {17}\nWarming up {18}\nWarming up {19}\nWarming up {20}\nWarming up {21}\nWarming up {22}\nStarting Simulation at 12/21 for DENVER CENTENNIAL  GOLDEN   N ANN HTG 99% CONDNS DB\nInitializing New Environment Parameters\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nWarming up {7}\nWarming up {8}\nWarming up {9}\nWarming up {10}\nWarming up {11}\nWarming up {12}\nWarming up {13}\nWarming up {14}\nWarming up {15}\nWarming up {16}\nStarting Simulation at 07/21 for DENVER CENTEN...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "energyplus.TestNonASCIIDirsAndFiles.NoPlugin.FromWithin",
+      "status": "passed",
+      "time": "4.27787",
+      "output": "EnergyPlus Starting\nEnergyPlus, Version 25.2.0-6a1536bc95, YMD=2025.11.20 15:35\nAdjusting Air System Sizing\nAdjusting Standard 62.1 Ventilation Sizing\nInitializing Simulation\nReporting Surfaces\nBeginning Primary Simulation\nInitializing New Environment Parameters\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nWarming up {7}\nWarming up {8}\nWarming up {9}\nWarming up {10}\nWarming up {11}\nWarming up {12}\nWarming up {13}\nWarming up {14}\nWarming up {15}\nWarming up {16}\nWarming up {17}\nWarming up {18}\nWarming up {19}\nWarming up {20}\nWarming up {21}\nWarming up {22}\nStarting Simulation at 12/21 for DENVER CENTENNIAL  GOLDEN   N ANN HTG 99% CONDNS DB\nInitializing New Environment Parameters\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nWarming up {7}\nWarming up {8}\nWarming up {9}\nWarming up {10}\nWarming up {11}\nWarming up {12}\nWarming up {13}\nWarming up {14}\nWarming up {15}\nWarming up {16}\nStarting Simulation at 07/21 for DENVER CENTEN...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "API.Runtime.PythonPlugin.TestRuntimeReleasesTheGIL",
+      "status": "passed",
+      "time": "2.44092",
+      "output": "EnergyPlus Starting\nEnergyPlus, Version 25.2.0-6a1536bc95, YMD=2025.11.20 15:36\n**FATAL:Python import error causes program termination\nEnergyPlus Run Time=00hr 00min  1.22sec\nProgram terminated: EnergyPlus Terminated--Error(s) Detected.\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "Basement.AutoGriddingDepthIsTooHigh",
+      "status": "passed",
+      "time": "0.239166",
+      "output": " Completed Reading Weather File\n Done Parsing The Energyplus Weather File\n\n You have selected to use an equivalent foundation based on the\n area to perimeter ratio supplied in the IDF file.\n\n\n You have selected to have the solution grid sized automatically.\n\nSTOP GroundTempCalc Terminated--Error(s) Detected.\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "ConvertInputFormat.ExtraDotFile_AbsolutePath",
+      "status": "passed",
+      "time": "1.57002",
+      "output": "Input file converted to EPJSON successfully | 1/1 | /home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/1.ZoneUncontrolled.idf\nNamespace(convertinputformat_exe=PosixPath('/home/elee/ci/clone_branch/build/Products/ConvertInputFormat-25.2.0'), out_dir=PosixPath('/home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/ExtraDotFile_AbsolutePath'), input_file=PosixPath('/home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/1.ZoneUncontrolled.idf'), expected_filename=PosixPath('1.ZoneUncontrolled.epJSON'))\nRunning: /home/elee/ci/clone_branch/build/Products/ConvertInputFormat-25.2.0 --output /home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/ExtraDotFile_AbsolutePath /home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/1.ZoneUncontrolled.idf\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "API.TestRuntimeC",
+      "status": "passed",
+      "time": "6.42498",
+      "output": "EnergyPlus Starting\nEnergyPlus, Version 25.2.0-6a1536bc95, YMD=2025.11.20 15:35\nAdjusting Air System Sizing\nAdjusting Standard 62.1 Ventilation Sizing\nInitializing Simulation\nReporting Surfaces\nBeginning Primary Simulation\nInitializing New Environment Parameters\nCALLBACK: BeginNewEnvironmentHandler\nWarming up {1}\nCALLBACK: BeginZoneTimeStepBeforeInitHeatBalanceHandler\nCALLBACK: BeginZoneTimeStepAfterInitHeatBalanceHandler\nCALLBACK: BeginTimeStepBeforePredictorHandler\nCALLBACK: AfterPredictorBeforeHVACManagersHandler\nCALLBACK: AfterPredictorAfterHVACManagersHandler\nCALLBACK: InsideSystemIterationLoopHandler\nCALLBACK: InsideSystemIterationLoopHandler\nCALLBACK: InsideSystemIterationLoopHandler\nCALLBACK: InsideSystemIterationLoopHandler\nCALLBACK: EndOfSystemTimeStepBeforeHVACReportingHandler\nCALLBACK: EndOfSystemTimeStepAfterHVACReportingHandler\nCALLBACK: EndOfZoneTimeStepBeforeZoneReportingHandler\nCALLBACK: EndOfZoneTimeStepAfterZoneReportingHandler\nCALLBACK: BeginZoneTimeStepBeforeInitHeatBalanceHandler\nCALLBAC...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "ConvertInputFormat.ExtraDotFile__RelativePath",
+      "status": "passed",
+      "time": "1.5662",
+      "output": "Input file converted to EPJSON successfully | 1/1 | 1.ZoneUncontrolled.idf\nNamespace(convertinputformat_exe=PosixPath('/home/elee/ci/clone_branch/build/Products/ConvertInputFormat-25.2.0'), out_dir=PosixPath('ExtraDotFile__RelativePath'), input_file=PosixPath('1.ZoneUncontrolled.idf'), expected_filename=PosixPath('1.ZoneUncontrolled.epJSON'))\nRunning: /home/elee/ci/clone_branch/build/Products/ConvertInputFormat-25.2.0 --output ExtraDotFile__RelativePath 1.ZoneUncontrolled.idf\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "Basement.AutoGriddingDepthIsHigh",
+      "status": "passed",
+      "time": "0.926221",
+      "output": " Completed Reading Weather File\n Done Parsing The Energyplus Weather File\n\n You have selected to use an equivalent foundation based on the\n area to perimeter ratio supplied in the IDF file.\n\n\n You have selected to have the solution grid sized automatically.\n\n       YZ Wall TS         Inside      YZ Heat flux     Base T\n       XZ Wall TS         Inside      XZ Heat flux     Base T\n       Floor TS       Inside      Floor heat flux     Base T\n       YZ CL           XZ CL           FX CL           FY CL\n  TSYZUp    TSYZUpIn     TSYZLo     TSYZLoIn    Upper q     Lower q     Base T\n  TSXZUp    TSXZUpIn     TSXZLo     TSXZLoIn    Upper q     Lower q     Base T\n  TFPerim   TFPerimIn     TFCore    TFCoreIn      Perim q   Core q     Base T\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D so...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "Basement.AutoGriddingDepthIsLowish",
+      "status": "passed",
+      "time": "0.4822",
+      "output": " Completed Reading Weather File\n Done Parsing The Energyplus Weather File\n\n You have selected to use an equivalent foundation based on the\n area to perimeter ratio supplied in the IDF file.\n\n\n You have selected to have the solution grid sized automatically.\n\n       YZ Wall TS         Inside      YZ Heat flux     Base T\n       XZ Wall TS         Inside      XZ Heat flux     Base T\n       Floor TS       Inside      Floor heat flux     Base T\n       YZ CL           XZ CL           FX CL           FY CL\n  TSYZUp    TSYZUpIn     TSYZLo     TSYZLoIn    Upper q     Lower q     Base T\n  TSXZUp    TSXZUpIn     TSXZLo     TSXZLoIn    Upper q     Lower q     Base T\n  TFPerim   TFPerimIn     TFCore    TFCoreIn      Perim q   Core q     Base T\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D solution has not converged, Delta T>0.05\n 1-D so...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "ConvertInputFormat.DDYtoEPJSON",
+      "status": "passed",
+      "time": "1.49918",
+      "output": "Input file converted to EPJSON successfully | 1/1 | /home/elee/ci/clone_branch/src/ConvertInputFormat/../../weather/USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.ddy\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "ConvertInputFormat.RegularFile_AbsolutePath",
+      "status": "passed",
+      "time": "2.0792",
+      "output": "Input file converted to EPJSON successfully | 1/1 | /home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/1ZoneUncontrolled.idf\nNamespace(convertinputformat_exe=PosixPath('/home/elee/ci/clone_branch/build/Products/ConvertInputFormat-25.2.0'), out_dir=PosixPath('/home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/RegularFile_AbsolutePath'), input_file=PosixPath('/home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/1ZoneUncontrolled.idf'), expected_filename=PosixPath('1ZoneUncontrolled.epJSON'))\nRunning: /home/elee/ci/clone_branch/build/Products/ConvertInputFormat-25.2.0 --output /home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/RegularFile_AbsolutePath /home/elee/ci/clone_branch/build/src/ConvertInputFormat/tst/1ZoneUncontrolled.idf\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "ConvertInputFormat.RegularFile_RelativePath",
+      "status": "passed",
+      "time": "2.08177",
+      "output": "Input file converted to EPJSON successfully | 1/1 | 1ZoneUncontrolled.idf\nNamespace(convertinputformat_exe=PosixPath('/home/elee/ci/clone_branch/build/Products/ConvertInputFormat-25.2.0'), out_dir=PosixPath('RegularFile_AbsolutePath'), input_file=PosixPath('1ZoneUncontrolled.idf'), expected_filename=PosixPath('1ZoneUncontrolled.epJSON'))\nRunning: /home/elee/ci/clone_branch/build/Products/ConvertInputFormat-25.2.0 --output RegularFile_AbsolutePath 1ZoneUncontrolled.idf\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "APISimulation.user_defined_equipment.py",
+      "status": "passed",
+      "time": "6.08146",
+      "output": "EnergyPlus Starting\nEnergyPlus, Version 25.2.0-6a1536bc95, YMD=2025.11.20 15:36\nInitializing Response Factors\nCalculating CTFs for \"EXTWALL80\"\nCalculating CTFs for \"PARTITION06\"\nCalculating CTFs for \"FLOOR SLAB 8 IN\"\nCalculating CTFs for \"ROOF34\"\nInitializing Window Optical Properties\nInitializing Solar Calculations\nAllocate Solar Module Arrays\nInitializing Zone and Enclosure Report Variables\nInitializing Surface (Shading) Report Variables\nDetermining Shadowing Combinations\nComputing Window Shade Absorption Factors\nProceeding with Initializing Solar Calculations\nInitializing Surfaces\nInitializing Outdoor environment for Surfaces\nSetting up Surface Reporting Variables\nInitializing Temperature and Flux Histories\nInitializing Window Shading\nComputing Interior Absorption Factors\nComputing Interior Diffuse Solar Absorption Factors\nInitializing Solar Heat Gains\nInitializing Internal Heat Gains\nInitializing Interior Solar Distribution\nInitializing Interior Convection Coefficients\nGathering Information for Predefined...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "energyplus.TestNonASCIIDirsAndFiles.PythonPlugin.FromWithin",
+      "status": "passed",
+      "time": "11.3634",
+      "output": "EnergyPlus Starting\nEnergyPlus, Version 25.2.0-6a1536bc95, YMD=2025.11.20 15:35\nAdjusting Air System Sizing\nAdjusting Standard 62.1 Ventilation Sizing\nInitializing Simulation\nReporting Surfaces\nBeginning Primary Simulation\nInitializing New Environment Parameters\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nWarming up {7}\nWarming up {8}\nWarming up {9}\nStarting Simulation at 12/21 for DENVER CENTENNIAL  GOLDEN   N ANN HTG 99% CONDNS DB\nInitializing New Environment Parameters\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nStarting Simulation at 07/21 for DENVER CENTENNIAL  GOLDEN   N ANN CLG 1% CONDNS DB=>MWB\nWriting tabular output file results using comma format.\nWriting tabular output file results using tab format.\nWriting tabular output file results using text format.\nWriting tabular output file results using HTML format.\nWriting tabular output file results using XML format.\nEnergyPlus Run Time=00hr 00min 10.62sec\nEnergyPl...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    },
+    {
+      "name": "energyplus.TestNonASCIIDirsAndFiles.PythonPlugin.FromOutside",
+      "status": "passed",
+      "time": "12.1652",
+      "output": "EnergyPlus Starting\nEnergyPlus, Version 25.2.0-6a1536bc95, YMD=2025.11.20 15:36\nAdjusting Air System Sizing\nAdjusting Standard 62.1 Ventilation Sizing\nInitializing Simulation\nReporting Surfaces\nBeginning Primary Simulation\nInitializing New Environment Parameters\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nWarming up {7}\nWarming up {8}\nWarming up {9}\nStarting Simulation at 12/21 for DENVER CENTENNIAL  GOLDEN   N ANN HTG 99% CONDNS DB\nInitializing New Environment Parameters\nWarming up {1}\nWarming up {2}\nWarming up {3}\nWarming up {4}\nWarming up {5}\nWarming up {6}\nStarting Simulation at 07/21 for DENVER CENTENNIAL  GOLDEN   N ANN CLG 1% CONDNS DB=>MWB\nWriting tabular output file results using comma format.\nWriting tabular output file results using tab format.\nWriting tabular output file results using text format.\nWriting tabular output file results using HTML format.\nWriting tabular output file results using XML format.\nEnergyPlus Run Time=00hr 00min 11.03sec\nEnergyPl...\n[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]\n",
+      "parsed_errors": [
+
+      ],
+      "failure_type": ""
+    }
   ],
   "failure": null,
   "package_results": [
@@ -72,14 +672,14 @@ valgrind_counters_total_indirect_jump_misses:
     "permalink": "EnergyPlus-6a1536bc952f28ad7aa33d2a87a7fc7db75bb018-PR11344-x86_64-Linux-Ubuntu-24.04-gcc-13.3-UnitTestsCoverage-RelWithDebInfo.html",
     "tags": "data",
     "layout": "ci_results",
-    "date": "2025-11-20 21:33:01",
+    "date": "2025-11-20 21:37:09",
     "unhandled_failure": false,
-    "build_error_count": 0,
+    "build_error_count": 1,
     "build_warning_count": 0,
     "package_error_count": 0,
     "package_warning_count": 0,
-    "test_count": 0,
-    "test_passed_count": 0,
+    "test_count": 31,
+    "test_passed_count": 30,
     "repository": "bigladder/EnergyPlus",
     "compiler": "gcc",
     "compiler_version": "13.3",
@@ -93,14 +693,14 @@ valgrind_counters_total_indirect_jump_misses:
     "tag_name": null,
     "commit_sha": "6a1536bc952f28ad7aa33d2a87a7fc7db75bb018",
     "branch_name": "Fix-11343-FFHX-metering-end-uses",
-    "test_run": false,
+    "test_run": true,
     "pull_request_issue_id": "11344",
     "pull_request_base_repository": "NREL/EnergyPlus",
     "pull_request_base_ref": "develop",
     "device_id": "x86_64-Linux-Ubuntu-24.04-gcc-13.3-UnitTestsCoverage-RelWithDebInfo",
-    "pending": true,
-    "build_time": null,
-    "test_time": null,
+    "pending": false,
+    "build_time": 172.559818305,
+    "test_time": 16.213607534,
     "package_time": null,
     "install_time": null,
     "results_repository": "Myoldmopar/EnergyPlusBuildResults",
@@ -109,11 +709,11 @@ valgrind_counters_total_indirect_jump_misses:
     "coverage_enabled": true,
     "coverage_pass_limit": 41.0,
     "coverage_warn_limit": 40.0,
-    "coverage_lines": 0,
-    "coverage_total_lines": 0,
-    "coverage_functions": 0,
-    "coverage_total_functions": 0,
-    "coverage_url": null,
+    "coverage_lines": 54986,
+    "coverage_total_lines": 367218,
+    "coverage_functions": 3852,
+    "coverage_total_functions": 11904,
+    "coverage_url": "Error uploading files: Failed to upload /home/elee/ci/clone_branch/build/lcov-html/index-sort-l.html to energyplus/coverage/2025-11-20-EnergyPlus-6a1536bc95-PR11344-x86_64-gcc-13.3UTCRWDI/index-sort-l.html: An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.\n",
     "asset_url": null,
     "performance_total_time": null,
     "performance_test_count": 0,
